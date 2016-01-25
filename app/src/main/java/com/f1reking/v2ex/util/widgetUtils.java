@@ -8,7 +8,7 @@ import android.widget.EditText;
  * 控件辅助工具类
  * Created by F1ReKing on 2016/1/2.
  */
-public class widgetUtil {
+public class widgetUtils {
 
 	public static void setEditTextCursorLocation(EditText editText) {
 		CharSequence text = editText.getText();

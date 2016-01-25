@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * Created by F1ReKing on 2016/1/2.
  */
-public class SPUtil {
+public class SPUtils {
     /**
      * 保存在手机里面的文件名
      */

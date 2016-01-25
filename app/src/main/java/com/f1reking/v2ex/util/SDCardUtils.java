@@ -15,9 +15,9 @@ import java.io.FileOutputStream;
  * SD卡相关的辅助类
  * Created by F1ReKing on 2016/1/2.
  */
-public class SDCardUtil {
+public class SDCardUtils {
 
-    private SDCardUtil() {
+    private SDCardUtils() {
         throw new Error("Do not need instantiate!");
     }
 
@@ -212,7 +212,7 @@ public class SDCardUtil {
      */
     public static String getTempImageFilePath() throws Exception {
         try {
-            return SDCardUtil.getTempPath() + "temp.jpeg";
+            return SDCardUtils.getTempPath() + "temp.jpeg";
         } catch (Exception e) {
             throw e;
         }

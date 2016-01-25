@@ -116,8 +116,8 @@ public class ImageCompressUtil {
      */
     public static File compressAndCopyImageFile(Context context,String fromPath, String toPath,
                                                 int quality) {
-        float width = DisplayUtil.getDisplayMetrics(context).x * 2 / 3;
-        float heigth = DisplayUtil.getDisplayMetrics(context).y * 2 / 3;
+        float width = DisplayUtils.getDisplayMetrics(context).x * 2 / 3;
+        float heigth = DisplayUtils.getDisplayMetrics(context).y * 2 / 3;
         Bitmap bitmap = getBitmapFromPath(fromPath, width, heigth);
         // Bitmap bitmap = BitmapFactory.decodeFile(fromPath);
         // Bitmap bitmap = getCompressBitmapBySampleSize(fromPath, 2);

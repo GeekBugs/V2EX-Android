@@ -31,14 +31,14 @@ import javax.security.auth.x500.X500Principal;
  * APP相关信息工具类。获取版本信息
  * Created by F1ReKing on 2016/1/2.
  */
-public class AppUtil {
+public class AppUtils {
     private static final boolean DEBUG = true;
-    private static final String TAG = "AppUtil";
+    private static final String TAG = "AppUtils";
 
     /**
      * Don't let anyone instantiate this class.
      */
-    private AppUtil() {
+    private AppUtils() {
         throw new Error("Do not need instantiate!");
     }
 

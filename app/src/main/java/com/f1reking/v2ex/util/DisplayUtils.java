@@ -17,7 +17,7 @@ import android.widget.ListView;
  * 屏幕密度、大小等相关函数类
  * Created by F1ReKing on 2016/1/2.
  */
-public class DisplayUtil {
+public class DisplayUtils {
 
     /**
      * 获取状态栏高度

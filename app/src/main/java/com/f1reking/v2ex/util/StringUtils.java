@@ -8,11 +8,11 @@ import java.util.Locale;
  * 字符串辅助工具类
  * Created by F1ReKing on 2016/1/2.
  */
-public final class StringUtil {
+public final class StringUtils {
     /**
      * Don't let anyone instantiate this class.
      */
-    private StringUtil() {
+    private StringUtils() {
         throw new Error("Do not need instantiate!");
     }
 

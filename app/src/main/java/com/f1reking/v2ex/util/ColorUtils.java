@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
  *Created by F1ReKing on 2016/1/2.
  * 颜色转换工具类
  */
-public class ColorUtil {
+public class ColorUtils {
 
     /**
      * 获取资源中的颜色

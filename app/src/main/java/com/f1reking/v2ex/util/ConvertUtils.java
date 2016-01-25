@@ -13,7 +13,7 @@ import java.io.ByteArrayOutputStream;
  * 转换工具类
  * Created by F1ReKing on 2016/1/2.
  */
-public class ConvertUtil {
+public class ConvertUtils {
 
     /**
      * dp 转换成 px

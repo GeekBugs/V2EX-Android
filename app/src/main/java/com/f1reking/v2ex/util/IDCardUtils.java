@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 /**
  * Created by F1ReKing on 2016/1/2.
  */
-public class IDCardUtil {
+public class IDCardUtils {
 	/*********************************** 身份证验证开始 ****************************************/
 	/**
 	 * 身份证号码验证 1、号码的结构 公民身份号码是特征组合码，由十七位数字本体码和一位校验码组成。排列顺序从左至右依次为：六位数字地址码，
@@ -216,7 +216,7 @@ public class IDCardUtil {
 			}
 			String IDCardNum = input.nextLine();
 
-			IDCardUtil cc = new IDCardUtil();
+			IDCardUtils cc = new IDCardUtils();
 			System.out.println(cc.IDCardValidate(IDCardNum));
 		}
 		// System.out.println(cc.isDate("1996-02-29"));

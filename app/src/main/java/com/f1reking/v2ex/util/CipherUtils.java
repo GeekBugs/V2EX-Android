@@ -13,9 +13,9 @@ import javax.crypto.spec.DESKeySpec;
  * MD5工具类
  * Created by F1ReKing on 2016/1/2.
  */
-public class CipherUtil {
+public class CipherUtils {
 
-    private CipherUtil() {
+    private CipherUtils() {
     }
 
     /**
@@ -72,7 +72,7 @@ public class CipherUtil {
             throws Exception {
         Cipher cipher = Cipher.getInstance(algorithm);
         cipher.init(Cipher.DECRYPT_MODE, key);
-        String result = new String(cipher.doFinal(StringUtil
+        String result = new String(cipher.doFinal(StringUtils
                 .hexStringToByteArray(data)), "utf8");
         return result;
     }
@@ -89,7 +89,7 @@ public class CipherUtil {
             throws Exception {
         Cipher cipher = Cipher.getInstance(algorithm);
         cipher.init(Cipher.ENCRYPT_MODE, key);
-        return StringUtil.byteArrayToHexString(cipher.doFinal(data
+        return StringUtils.byteArrayToHexString(cipher.doFinal(data
                 .getBytes("utf8")));
     }
 

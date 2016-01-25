@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
  * 时间工具类
  * Created by F1ReKing on 2016/1/2.
  */
-public class TimeUtil {
+public class TimeUtils {
 
     public static String format(String pattern,long milliseconds){
         return (new SimpleDateFormat(pattern)).format(new Date(milliseconds));

@@ -12,9 +12,9 @@ import android.telephony.TelephonyManager;
  * 网络相关的工具类
  * Created by F1ReKing on 2016/1/2.
  */
-public class NetUtil {
+public class NetUtils {
 
-    private NetUtil() {
+    private NetUtils() {
         /* cannot be instantiated */
         throw new UnsupportedOperationException("cannot be instantiated");
     }

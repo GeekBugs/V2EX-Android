@@ -8,7 +8,7 @@ import android.widget.Toast;
  * Toast辅助工具类
  * Created by F1ReKing on 2016/1/2.
  */
-public class ToastUtil {
+public class ToastUtils {
     private static Toast toast = null;
 
     /**

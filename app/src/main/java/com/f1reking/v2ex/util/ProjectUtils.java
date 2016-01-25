@@ -27,11 +27,11 @@ import java.util.regex.Pattern;
 /**
  * Created by F1ReKing on 2016/1/2.
  */
-public class ProjectUtil {
+public class ProjectUtils {
 
     private static Context context;
 
-    public ProjectUtil(Context context) {
+    public ProjectUtils(Context context) {
         this.context = context;
     }
 
@@ -83,9 +83,9 @@ public class ProjectUtil {
     }
 
     public static File getPhotoDir(Context context) {
-        String path = SDCardUtil.getRootPath(context);
+        String path = SDCardUtils.getRootPath(context);
         if (path == null) {
-            ToastUtil.showToast(context, "无存储设备", 0);
+            ToastUtils.showToast(context, "无存储设备", 0);
             return null;
         }
         path = path + File.separator + "photo" + File.separator;
@@ -93,7 +93,7 @@ public class ProjectUtil {
         if (!dir.exists())
             dir.mkdirs();
         if (!dir.exists()) {
-            ToastUtil.showToast(context, "无法创建文件", 0);
+            ToastUtils.showToast(context, "无法创建文件", 0);
             return null;
         }
         return dir;
