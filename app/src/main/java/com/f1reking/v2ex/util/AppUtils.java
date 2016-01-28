@@ -65,7 +65,7 @@ public class AppUtils {
      * @param context 上下文
      * @return 当前版本信息
      */
-    public static String getVerName(Context context) {
+    public static String getAppVersion(Context context) {
         String verName = "";
         try {
             String packageName = context.getPackageName();
