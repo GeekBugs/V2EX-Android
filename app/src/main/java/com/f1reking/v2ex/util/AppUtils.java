@@ -84,8 +84,9 @@ public class AppUtils {
      */
     public static void installApk(Context context, File file) {
         Intent intent = new Intent();
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.setAction(Intent.ACTION_VIEW);
+        intent.setAction("android.intent.action.VIEW");
+        intent.addCategory("android.intent.category.DEFAULT");
+        intent.setType("application/vnd.android.package-archive");
         intent.setDataAndType(Uri.fromFile(file),
                 "application/vnd.android.package-archive");
         context.startActivity(intent);
@@ -137,6 +138,24 @@ public class AppUtils {
             }
         }
         return isRunning;
+    }
+
+    /**
+     * 判断当前App是否在后台
+     * <uses-permission android:name="android.permission.GET_TASKS" />
+     * @param context
+     * @return
+     */
+    public static boolean isAppBackground(final Context context){
+        ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        List<ActivityManager.RunningTaskInfo> tasks = am.getRunningTasks(1);
+        if (!tasks.isEmpty()){
+            ComponentName topActivity = tasks.get(0).topActivity;
+            if (!topActivity.getPackageName().equals(context.getPackageName())){
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
@@ -457,13 +476,13 @@ public class AppUtils {
     /**
      * 检测当前应用是否是Debug版本
      *
-     * @param ctx
+     * @param context
      * @return
      */
-    public static boolean isDebuggable(Context ctx) {
+    public static boolean isDebuggable(Context context) {
         boolean debuggable = false;
         try {
-            PackageInfo pinfo = ctx.getPackageManager().getPackageInfo(ctx.getPackageName(), PackageManager.GET_SIGNATURES);
+            PackageInfo pinfo = context.getPackageManager().getPackageInfo(context.getPackageName(), PackageManager.GET_SIGNATURES);
             Signature signatures[] = pinfo.signatures;
             for (int i = 0; i < signatures.length; i++) {
                 CertificateFactory cf = CertificateFactory.getInstance("X.509");

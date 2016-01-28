@@ -1,5 +1,6 @@
 package com.f1reking.v2ex.util;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -25,5 +26,17 @@ public class TimeUtils {
         }else{
             return String.format("%1$d:%2$TM:%2$TS",millis / millisOfOneHour,millis % millisOfOneHour);
         }
+    }
+
+    //把日期转为字符串
+    public static String ConverToString(Date date) {
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return df.format(date);
+    }
+
+    //把字符串转为日期
+    public static Date ConverToDate(String strDate) throws Exception {
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return df.parse(strDate);
     }
 }

@@ -18,7 +18,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.regex.Matcher;
@@ -242,17 +241,7 @@ public class ProjectUtils {
 
     }
 
-    //把日期转为字符串
-    public static String ConverToString(Date date) {
-        DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        return df.format(date);
-    }
 
-    //把字符串转为日期
-    public static Date ConverToDate(String strDate) throws Exception {
-        DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        return df.parse(strDate);
-    }
 
 
 }
